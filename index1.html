@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<title>SOFT CODEON ANIMATED SEARCH BAR</title>
+<div class="softsearch">
+<input type="text" placeholder="Type for SEARCH" spellcheck="false">
+<a href="https://softcodeon.com" target="_blank"><i class="fa fa-search"></i></a>
+</div>
+<style>
+:root{--softsearch-boyut:60px;--softsearch-uzunluk:70vw;}
+*{  margin:0; padding:0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.softsearch{
+    position: absolute;
+    top:50%; left:50%;
+    transform:translate(-50%,-50%);
+    background: #590e3a;
+    height:var(--softsearch-boyut);
+    border-radius: var(--softsearch-boyut);
+    padding:10px; width:auto;
+    display:flex; align-items: center;
+    box-shadow: 0 0 5px rgba(0,0,0,.7);
+}
+.softsearch a{
+    color:black;
+    width:var(--softsearch-boyut);
+    height:var(--softsearch-boyut);
+    background: white;border:none;
+    border-radius: 50%;display:flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: calc(var(--softsearch-boyut) * .6);
+}
+.softsearch input{
+    border:none; background: none;
+    outline: none; color:white;
+    font-size: 120%; padding:0;
+    width:0; transition: .3s ease-in;
+}
+.softsearch:hover > input {
+    width:var(--softsearch-uzunluk);
+    padding:0 12px;
+  }
+.softsearch:hover > a {
+    background: transparent;
+  color:gray}</style>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
